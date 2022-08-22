@@ -61,8 +61,11 @@ class MainActivity : AppCompatActivity() {
                 rcNotes.layoutManager = LinearLayoutManager(this)
                 adapterNotes = NotesAdapter(notesList){
                     //delete note when clicked
-                    deleteNoteById(it.noteId)
-                    Toast.makeText(this, "delete item successfully", Toast.LENGTH_SHORT).show()
+                   // deleteNoteById(it.noteId)
+                  //  Toast.makeText(this, "delete item successfully", Toast.LENGTH_SHORT).show()
+
+                    var cdd = CustomDialog(this, it, notesDatabase)
+                    cdd.show()
                 }
                 rcNotes.adapter = adapterNotes
             }
