@@ -1,5 +1,6 @@
 package com.hasan.roomdbexample
 
+import android.widget.EditText
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
@@ -15,4 +16,7 @@ interface NotesDAO {
 
     @Query("DELETE FROM notes WHERE noteId =:noteId")
     fun deleteNoteById(noteId: Int)
+
+    @Query("UPDATE notes SET noteText= :noteText WHERE noteId =:noteId")
+    fun updateNoteById(noteText: String, noteId: Int)
 }
