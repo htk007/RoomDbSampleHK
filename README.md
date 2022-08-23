@@ -8,7 +8,7 @@ Example include:<br />
 <hr />
 TODOS:<br />
 🔳Sonarqube configuration<br />
-⬜Jacoco integration<br />
+🔳Jacoco integration<br />
 ⬜add tests<br />
 ⬜update operation from ui call fix<br />
 ⬜delete operation from ui call fix<br />
