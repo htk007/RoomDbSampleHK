@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'kotlin-android'
     id 'kotlin-kapt'
+    id "org.sonarqube"
 }
 
 android {
@@ -30,8 +31,30 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-}
 
+
+}
+sonarqube {
+    properties {
+        property "sonar.projectName", "My Android App"
+        property "sonar.projectKey", "@1ph@num3r1ck3y"
+        property "sonar.sources", "src"
+        property "sonar.sourceEncoding", "UTF-8"
+        property "sonar.tests", ["src/test/java"]
+        property "sonar.test.inclusions", "**/*Test*/**"
+        property "sonar.exclusions", '**/.gradle/**,' +
+                "**/androidTest/**," +
+                "**/R.class," +
+                "**/BuildConfig.*," +
+                "**/Manifest*.*," +
+                "**/android/databinding/*," +
+                "**/androidx/databinding/*," +
+                "**/*MapperImpl*.*," +
+                "**/BuildConfig.*," +
+                "**/Manifest*.*," +
+                "**/google-services.json"
+    }
+}
 dependencies {
 
     implementation 'androidx.core:core-ktx:1.8.0'
