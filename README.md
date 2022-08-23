@@ -5,6 +5,7 @@ Example include:<br />
 🔆Alert dialog<br />
 🔆RecycleView(custom)<br />
 🔆 Sonarqube configuration<br />
+🔆 Jacoco(for code coverage) configuration<br />
 <hr />
 TODOS:<br />
 🔳Sonarqube configuration<br />
